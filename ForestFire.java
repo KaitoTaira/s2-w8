@@ -1,5 +1,11 @@
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class ForestFire {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
+        ArrayList<Forest> forests = new ArrayList<Forest>();
         // Step 1: Read in the data file (forests.csv) and create Forest objects.
         //   - Open the CSV file.
         //   - Skip/read the header row.
@@ -16,6 +22,15 @@ public class ForestFire {
         //   - At the end of each simulation step, you should write the current state of the Tree[][] grid to a file
 
         // Step 4: We will vibe code our way to visualization
+        File file = new File("forests.csv");
+        Scanner s = new Scanner(file);
+        s.nextLine();
+        while(s.hasNextLine()){
+            String line = s.nextLine();
+            String pieces[] = line.split(",");
+            Forest temp = new Forest(pieces[0], pieces[1], pieces[2], Double.parseDouble(pieces[3]), Integer.parseInt(pieces[4]), Integer.parseInt(pieces[5]), Integer.parseInt(pieces[6]), Integer.parseInt(pieces[7]));
+            forests.add(temp);
+        }
 
     }
 
