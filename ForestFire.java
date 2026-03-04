@@ -24,14 +24,14 @@ public class ForestFire {
         // Step 4: We will vibe code our way to visualization
         File file = new File("forests.csv");
         Scanner s = new Scanner(file);
+        if(s.hasNextLine())
         s.nextLine();
         while(s.hasNextLine()){
             String line = s.nextLine();
             String pieces[] = line.split(",");
-            Forest temp = new Forest(pieces[0], pieces[1], pieces[2], Double.parseDouble(pieces[3]), Integer.parseInt(pieces[4]), Integer.parseInt(pieces[5]), Integer.parseInt(pieces[6]), Integer.parseInt(pieces[7]));
+            Forest temp = new Forest(pieces[0], pieces[1], pieces[2], Double.parseDouble(pieces[7]), Integer.parseInt(pieces[9]), Integer.parseInt(pieces[8]), Integer.parseInt(pieces[5]), Integer.parseInt(pieces[6]));
             forests.add(temp);
         }
-
     }
 
 }
