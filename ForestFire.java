@@ -32,6 +32,16 @@ public class ForestFire {
             Forest temp = new Forest(pieces[0], pieces[1], pieces[2], Double.parseDouble(pieces[7]), Integer.parseInt(pieces[9]), Integer.parseInt(pieces[8]), Integer.parseInt(pieces[5]), Integer.parseInt(pieces[6]));
             forests.add(temp);
         }
+        forests.get(0).getGrid()[0][0].setState(Tree.BURNING);
+        while(!forests.get(0).fireEnded()){
+            forests.get(0).spreadFire();
+        }
+        System.out.println(forests.get(0).percentBurned());
+        forests.get(0).saveGridSnapshotToFile();
+        // forests.get(0).printGrid();
+
+
+
     }
 
 }

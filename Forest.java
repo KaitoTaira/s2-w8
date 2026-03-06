@@ -105,9 +105,40 @@ public class Forest {
         // Step 1: Count how many trees have burned out (commonly represented as EMPTY after burning).
         // Step 2: Compute and return (burnedCount * 100.0) / initialTreeCount as a percentage.
         // Step 3: Guard against divide-by-zero if the initialTreeCount is 0.
-        return 0.0;
+        int count = 0;
+        for(int r = 0; r < grid.length; r++){
+            for(int c = 0; c < grid[0].length; c++){
+                if(grid[r][c].getState() == Tree.EMPTY){
+                    count++;
+                }
+            }
+        }
+        return (count * 100.0)/initialTreeCount;
 
     }
+
+    public boolean fireEnded(){
+        for(int r = 0; r < grid.length; r++){
+            for(int c = 0; c < grid[0].length; c++){
+                if(grid[r][c].getState() == Tree.EMPTY){
+                    return false;
+                }
+                else{
+                    return true;
+                }
+            }
+        }
+        return true;
+    }
+
+    // public void printGrid(){
+    //     for(Tree[] t: grid){
+    //         for(Tree tree: t){
+    //             System.out.print(tree.getState()+" ");
+    //         }
+    //         System.out.println();
+    //     }
+    // }
 
     public void saveGridSnapshotToFile() {
         if (grid == null || grid.length == 0 || grid[0].length == 0) {
@@ -148,7 +179,6 @@ public class Forest {
             throw new RuntimeException("Failed to write grid snapshot to file: " + fileName, e);
         }
     }
-
     public void setGrid(Tree[][] grid) {
         this.grid = grid;
     }

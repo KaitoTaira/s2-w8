@@ -1,0 +1,65 @@
+=== GRID SNAPSHOT ===
+F.T
+T..
+T..
+
+=== GRID SNAPSHOT ===
+FT.
+..T
+T..
+
+=== GRID SNAPSHOT ===
+F..
+T.T
+T..
+
+=== GRID SNAPSHOT ===
+F.T
+T..
+T..
+
+=== GRID SNAPSHOT ===
+F..
+TTT
+TT.
+
+=== GRID SNAPSHOT ===
+FTT
+...
+..T
+
+=== GRID SNAPSHOT ===
+F..
+.TT
+.T.
+
+=== GRID SNAPSHOT ===
+F..
+.T.
+T.T
+
+=== GRID SNAPSHOT ===
+F..
+...
+TT.
+
+=== GRID SNAPSHOT ===
+F.T
+T.T
+.T.
+
+=== GRID SNAPSHOT ===
+F.T
+.T.
+...
+
+=== GRID SNAPSHOT ===
+FT.
+T..
+..T
+
+=== GRID SNAPSHOT ===
+FTT
+..T
+..T
+
